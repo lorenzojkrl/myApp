@@ -7,9 +7,14 @@
 </p>
 <p>The tutorial will cover:</p>
 <ul>
-  <li>Angular fundamentals</li>
-  <li>Binding</li>
-  <li>Routing</li>
-  <li>Simple forms</li>
-  <li>More, if I have time</li>
+  <li *ngFor="let topic of listOfTopics">{{ topic }}</li>
 </ul>
+
+<h3>Nice posts:</h3>
+<div *ngIf="showPosts">
+  <div *ngFor="let post of goodPosts">
+    <p>Title: {{ post.title }}</p>
+    <p>Summary: {{ post.summary }}</p>
+    <p>Link: {{ post.link }}</p>
+  </div>
+</div>
